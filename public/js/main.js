@@ -49,11 +49,6 @@ async function getData() {
   .then(resp => resp.json())
   .then(data => {
     flag_url = "https://www.countryflags.io/" + data['country'] + "/flat/64.png";
-    $('.country_flag').attr("src", flag_url);
-    $('#country_claps').html(data['c_count'] + 1); // Add 1 to consider upcoming clap
-    $('#country_name').html(getCountryName(data['country']));
-    $('#global_claps').html(data['g_count'] + 1); // Add 1 to consider upcoming clap
-    $('#daily_claps').html(data['day_count']);
   })
 }
 
